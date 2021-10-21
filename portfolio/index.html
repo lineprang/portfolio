@@ -4,18 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>LINE PRANG - FRONTEND DEVELOPER</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="img/solsikkedrawing.png" />
 </head>
 
-<body>
+
+  <body onhashchange="pageChange()">
 <header>
   <!--MOBILE NAVIGATION-->
+  <div class="flex-header">
+  
   <button class="header__button" id="btnNav" type="button">
     <img id="menu_icon" src="img/menu.png" alt="navigation menu">
   </button> 
+</div>
   <!-- navigation start -->
 <nav class="nav">
   <div class="nav__links">
@@ -30,48 +34,205 @@
   </a>
   <a href="#contact" class="nav__link">
   Contact</a>
-  </a>
+  
   </div>
+  
   <div class="nav__overlay"></div>
+
   <!-- DESKTOP topbar navigation -->
-  <nav class="tabbar">
-    <a href="#home" class="nav-link">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#projects" class="nav-link">Project</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
+  <ul class="tabbar">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li> <a href="#about" class="nav-link">About</a></li>
+    <li> <a href="#projects" class="nav-link">Projects</a></li>
+    <li> <a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
   </header>
   <div class="container">
   <!-- pages -->
   <!-- home page -->
-  <section id="home" class="page">
-    
+  <section id="home" class="pages">
+    <div class="flex-home">
+      <div class="home-text">
     <h2>Hi there!</h2>
-    <p>I am Line! I am an apiring frontend developer based in Aarhus!</p>
+    <p class="p-home">I am <strong>Line!</strong> I am an aspiring <strong>frontend developer</strong> based in Aarhus!<br><br>
+    I am devoted to crafting <strong>beautiful</strong> and usable web experiences.</p>
+  </div>
+    <img src="img/home-edit.png" alt="Line Prang" class="home-img">
+  </div>
+    <div id="fadeArrow" class="scroll-down">
+    <p>Scroll to learn more</p>
+    <img src="img/arrowdown.png" class="arrowdown-home" alt="Pil nedad">
+  </div>
   </section>
 
   <!-- about page -->
-  <section id="about" class="page">
-      <h2>About</h2>
-    <p>This is my about page</p>
-  </section>
+  <section id="about" class="pages">
+    <div class="flex-about">
+    <div>
+      <h2>Who am i?</h2>
+    <p class="p-about">I am Line, a creative and passionate multi media design student at Aarhus Business Academy specializing in frontend devolpment. <br><br>
+      As well as programming solutions with HTML, CSS and JS, I have experience with Github and Wordpress. I am curious and always eager to learn more and expand my skillset.<br><br> Besides that, I am a great teamplayer, easy to be around and I have management experience. My oldest hobby is photgraphy, which I have spent many years on.<br><br>
+      
+      <a href="cv-lineprang.jpg" download class="cv-download"><strong>Take a look at my CV</strong></a></p></div>
+      <br>
+      <div class="skills">
+        <h3>Key skills</h3>
+        <ul>
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+          <li>Figma/Adobe XD</li>
+          <li>Photoshop</li>
+          <li>Premiere Pro</li>
+          <li>Great teamplayer</li>
+          <li>Management</li>
+          <li>Photography</li>
+        </ul>
+      </div>
+    </div>
+      <br><br>
+      <img src="img/arrowdown.png" class="arrowdown" alt="Pil nedad">
+    </section>
 
   <!-- projects page -->
-  <section id="projects" class="page">
-      <h2>Projects</h2>
+  <section id="projects" class="pages">
+    <div class="flex-projects">
+    <div class="project-text">
+      <h2>My work</h2>
+      <p class="p-projects">Below you can take a look at some of my previous work and projects. <br><br>I am a creative individual, 
+        and love working on all kinds of arts. But my newfound passion is programming. <br><br> Should i be 
+      a part of your next project? Get in touch <a href="#contact"><strong>here!</strong></a></p>
+      </div>
+        <img src="img/mywork.png" alt="Line and computer" class="projects-img">
+      </div>
+        <br>
+        <br>
+        <div class="allProjects">
+        <a href="#project1"><div class="project-box">
+          <img src="img/podcut-thumbnail.png" alt="PodCut thumbnail" class="thumbnail">
+          <h4>PodCut</h4>
+          <p class="description">Webapplication project</p>
+          <p class="work">Coding - UX/UI</p>
+        </div><br></a>
+        
+        <a href="#project2">
+        <div class="project-box">
+          <img src="img/kaffebar-thumbnail.png" alt="Kaffebar thumbnail" class="thumbnail">
+          <h4>Kaffebar - institut for X</h4>
+          <p class="description">Website project</p>
+          <p class="work">Coding - UX/UI</p>
+        </div><br></a>
+
+        <a href="#project3">
+        <div class="project-box">
+          <img src="img/visitaarhus-thumbnail.jpg" alt="VisitAarhusNature thumbnail" class="thumbnail">
+          <h4>VisitAarhusNature</h4>
+          <p class="description">Webdoc project</p>
+          <p class="work">Coding - Content - Storytelling</p>
+        </div></a>
+      </div><br>
+        <p class="future">More projects will be added in the future!</p>
   </section>
 
   <!-- contact page -->
-  <section id="contact" class="page">
+  <section id="contact" class="pages">
+      
+        <div class="contact-wrap">
+      <h2>Get in touch</h2>
+      <div class="contact-flex">
+        <div>
+        <div class="email">
+          <img src="img/mailicon.png" class="contact-icon" alt="mail icon">
+          <a href="mailto:lineprang@hotmail.com">lineprang@hotmail.com </a>
+        </div>
+        <div class="phone">
+          <img src="img/phoneicon.png" class="contact-icon" alt="phone icon">
+          <a href="tel:+4520849077">+45 20 84 90 77</a>
+        </div>
+        <div class="insta">
+          <img src="img/instaicon.png" class="contact-icon" alt="instagram icon">
+          <a href="https://www.instagram.com/lineprang/">@lineprang</a>
+        </div>
+        <div class="linkedin">
+          <img src="img/linkedicon.png" class="contact-icon" alt="linkedin icon">
+          <a href="https://www.linkedin.com/in/line-prang-frontend-developer" class="contact-link">Line Prang Larsen</a>
+        </div></div>
+        <img src="img/solsikker-dark.png" alt="3 solsikker" class="sunflowers">
+
+      </div>
+        <img src="img/solsikke-dark.png" alt="solsikke" class="sunflower">
+      </div>
     
-      <h2>Contact</h2>
-    
-    <p>Clients page. Here goes some content.</p>
   </section>
 </div>
+
+<!-- Projects detailed page -->
+<!--PROJECT 1-->
+<div class="container2">
+<section id="project1" class="page">
+  <div class="back-next-buttons">
+    <a href="#projects" class="buttons">Back to all projects</a>
+    <a href="#project2" class="buttons">Next project</a>
+  </div>
+  <div class="detail-wrap">
+  <h2>Webapp project - PodCut</h2>
+  <div class="podcut-flex">
+  <p><strong>Description</strong> <br>Today there are a huge variety of podcasts to choose between. 
+    It can be diffucult to navigate through. PodCut is the solution. PodCut is a podcast guide, that generates podcast ideas that matches the users intersts and streaming services. 
+<br><br>
+<strong>Purpose</strong> <br> PodCut is our latest school project and the purpose of this project was to make a webapp showing our skills using Single Page Application structure, as well as using APIs and fetching and storing data.
+<br><br><strong>Resposibility</strong><br>Idea generation, research, testing, UX/UI, programming    
+<br><br>
+    
+    <a href="https://www.figma.com/file/Kd9frNxO9ab33aXBXrY6qH/Hi-fi?node-id=0%3A1" class="link">Figma prototype</a>
+    <br><br><a href="http://www.cmedia-design.dk/webapp/#/loginorcreate" class="link">Link to prototype (open in chrome)</a></p>
+<img src="img/podcut1.png" alt="podcut mockup" class="podcut-mockup">
+<img src="img/podcut2.png" alt="podcut mockup" class="podcut-mockup">
+</div></div>
+</section>
+
+<!--PROJECT 2-->
+<section id="project2" class="page">
+  <div class="back-next-buttons">
+    <a href="#projects" class="buttons">Back to all projects</a>
+    <a href="#project3" class="buttons">Next project</a>
+  </div>
+  <div class="detail-wrap">
+    <h2>Website project - Kaffebar - institut for X</h2>
+    <div class="podcut-flex">
+      <p><strong>Description</strong> <br>This website is made for Kaffebaren Godsbanen in Aarhus. The owner wanted a website that reflects the community and the vibe from Godsbanen. Furthermore he wanted an outcast for a digital stamp card. The website is a mix of information, inspiration and fun.
+  <br><br>
+  <strong>Purpose</strong><br>The purpose of this project was to work with an actual client, and create something they needed as well as something the users would find helpful. 
+  <br><br><strong>Resposibility</strong><br>Project management, UX/UI, programming, research, testing
+      <br><br><a href="http://lineprang.dk/eaaa/kaffebar/" class="link">Link to prototype (open in chrome)</a></p>
+  <img src="img/stempelkort.png" alt="kaffebar mockup" class="podcut-mockup">
+  <img src="img/menukort.png" alt="kaffebar mockup" class="podcut-mockup">
+  </div></div>
+</section>
+
+<!--PROJECT 3-->
+<section id="project3" class="page">
+  <div class="back-next-buttons">
+    <a href="#projects" class="buttons">Back to all projects</a>
+    <a href="#project1" class="buttons">Next project</a>
+  </div>
+  <div class="detail-wrap">
+    <h2>VisitAarhusNature</h2>
+    <div class="podcut-flex">
+    <p><strong>Description</strong> <br>VisitAarhusNature is an engaging information site. It brings ideas to new outdoor activities in Aarhus. This prototype focuses on the categories 'walk' and 'parks'. It is a web doc created with a lot of video content.
+  <br><br>
+  <strong>Purpose</strong><br>The purpose of this project was to create an engaging web doc and to show our skills using different data sources, as well as creating engaging and informative content, primarily video content.
+  <br><br><strong>Resposibility</strong><br> Videoproduction, content creation, idea generation, programming    
+  <br><br><a href="http://lineprang.dk/eaaa/VisitAarhusNature/" class="link">Link to prototype (open in chrome)</a></p>
+      <div class="flex-mockup">
+      <img src="img/visitaarhusnature2.png" alt="visitaarhusnature mockup" class="aarhus-mockup">
+      <img src="img/visitaarhusnature1.png" alt="visitaarhusnature mockup" class="aarhus-mockup">
+    </div>
+    </div></div>
   
-  <!-- SPA Router functionality  -->
-  <!--<script src="js/router.js"></script>
+</section>
+</div>
+  <!-- SPA functionality  -->
+  <script src="js/spa.js"></script>
   <!-- main js file -->
   <script src="js/main.js"></script>
 </body>
